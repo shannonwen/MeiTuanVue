@@ -1,4 +1,4 @@
-# meituan
+# meituan with Vue
 
 ## Project setup
 ```
