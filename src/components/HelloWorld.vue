@@ -1,32 +1,27 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
+    <div v-html="msg1" :id="id" v-if="msg==msg1"></div>
+    <div v-else>123</div>
+
+    <div :class="{a1:a3}">
+      我借你{{money}},你还我{{giveback}},还剩{{b}}
+
+    </div>
+    <div :class="obj">12321</div>
     <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
+      <!-- <li v-for="(item,index) in list" :key="item">
+        <span>{{index+1}},英文名：{{item.name}},中文名:{{item.han}}</span>
+      </li> -->
+     <template v-for="(item,index) in list">
+      <li :key="item">hello</li>
+      <li :key="item">
+        <span>{{index+1}},英文名：{{item.name}},中文名:{{item.han}}</span>
+      </li>
+    </template>
     </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    
+    <div><span></span></div>
   </div>
 </template>
 
@@ -35,6 +30,30 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data(){
+    return {
+      msg1: '<h1 style="color:red;">hello world</h1>',
+      id: 'text',
+      money: 1000,
+      giveback: 10,
+      a1: "class0",
+      a2: "class1",
+      a3: true,
+      obj: {
+        'test--1':true
+      },
+      list: [
+        {name:"wlx",han: "温龙香"},
+        {name:"wlx2",han: "温龙香2"},
+        {name:"wlx3",han: "温龙香3"}
+      ]
+    }
+  },
+  computed:{
+    b: function(){
+      return this.money - this.giveback
+    }
   }
 }
 </script>
