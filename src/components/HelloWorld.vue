@@ -10,15 +10,15 @@
     </div>
     <div :class="obj">12321</div>
     <ul>
-      <!-- <li v-for="(item,index) in list" :key="item">
+      <li v-for="(item,index) in list" :key="index">
         <span>{{index+1}},英文名：{{item.name}},中文名:{{item.han}}</span>
-      </li> -->
-     <template v-for="(item,index) in list">
+      </li>
+     <!-- <template v-for="(item,index) in list">
       <li :key="item">hello</li>
       <li :key="item">
         <span>{{index+1}},英文名：{{item.name}},中文名:{{item.han}}</span>
       </li>
-    </template>
+    </template> -->
     </ul>
     
     <div><span></span></div>
