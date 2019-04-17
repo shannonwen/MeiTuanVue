@@ -9,6 +9,7 @@
       <h1 slot="a">我要加东西</h1>
       <h1 slot="b">我要加东西22</h1>
     </com>
+    <Vuexx></Vuexx>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import './components/n'
 import ev from './components/events.vue'
 import com from './components/com.vue'
+import Vuexx from './components/vuex.vue'
 
 export default {
 
@@ -24,7 +26,8 @@ export default {
   components: {
     HelloWorld,
     ev,
-    com
+    com,
+    Vuexx
   },
   data(){
     return {
