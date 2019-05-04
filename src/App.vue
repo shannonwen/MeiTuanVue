@@ -9,7 +9,11 @@
       <h1 slot="a">我要加东西</h1>
       <h1 slot="b">我要加东西22</h1>
     </com>
-    <Vuexx></Vuexx>
+    <!--vuex简单应用-->
+    <!-- <Vuexx></Vuexx> -->
+    <!--vuex高级应用-->
+    <pagea/>
+    <pageb/>
   </div>
 </template>
 
@@ -18,7 +22,10 @@ import HelloWorld from './components/HelloWorld.vue'
 import './components/n'
 import ev from './components/events.vue'
 import com from './components/com.vue'
-import Vuexx from './components/vuex.vue'
+// import Vuexx from './components/vuex.vue'
+
+import pagea from './components/a.vue'
+import pageb from './components/b.vue'
 
 export default {
 
@@ -27,7 +34,9 @@ export default {
     HelloWorld,
     ev,
     com,
-    Vuexx
+    // Vuexx,
+    pagea,
+    pageb
   },
   data(){
     return {
@@ -37,7 +46,7 @@ export default {
   },
   methods:{
     msg(){
-      console.log("子组件触发")
+      // console.log('子组件触发');
     }
   }
 }

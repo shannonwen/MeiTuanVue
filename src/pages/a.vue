@@ -1,11 +1,20 @@
 <template lang="html">
-    <h1>page a</h1>
+    <!-- <div>
+        <h1>pagea:{{ $store.state.pagea.money }}</h1>
+        <button @click="add">add</button>
+        <button @click="reduce">reduce</button>
+    </div> -->
 </template>
 
 <script>
-export default {
-    
-}
+// import {mapActions } from 'vuex';
+
+// export default {
+//     methods: mapActions([
+//         'add',
+//         'reduce'
+//     ])    
+// }
 </script>
 
 <style lang="css">
